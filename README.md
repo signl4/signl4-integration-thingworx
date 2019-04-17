@@ -6,7 +6,7 @@ Mobile alerting with tracking & escalation for PTC ThingWorx.
 
 PTC ThingWorx is a platform for the development and deployment of smart, connected IoT (Internet of Things) devices. Pairing this powerful IoT platform with SIGNL4 can enhance your daily operations with an extension to your mobile team in the field or on the shop floor.
 
-![SIGNL4](file://thingworx-signl4.png)
+![SIGNL4](thingworx-signl4.png)
 
 ## How it Works
 
@@ -54,18 +54,18 @@ If you have your IoT devices already defined in ThingWorx you can proceed with t
 https://developer.thingworx.com/en/resources/guides/thingworx-foundation-quickstart
 As a result you will have a MyHouse Thing with a temperature sensor.
 
-![ThingWorx House](file://thingworx-house.png)
+![ThingWorx House](thingworx-house.png)
 
 The MyHouse Thing has several properties as defined in the tutorial. One property is the temperature.
 
-![ThingWorx House Properties](file://thingworx-house-properties.png)
+![ThingWorx House Properties](thingworx-house-properties.png)
 
 This is what we monitor and if the temperature is too low we will raise an alert.
 
 2. Create the Subscription in ThingWorx
 Now, in our MyHouse Thing we create a subscription as already described in the tutorial.
 
-![ThingWorx House Subscription](file://thingworx-house-subscription.png)
+![ThingWorx House Subscription](thingworx-house-subscription.png)
 
 The JavaScript code of this subscription contains the whole logic of sending the alert notification via SIGNL4. It puts all the necessary data into a JSON format and then sends an HTTP Post request to the SIGNL4 webhook URL. Please make sure you use your team secret here.
 
@@ -75,7 +75,7 @@ https://github.com/signl4/signl4-integration-thingworx
 3. Create the Alert in ThingWorx
 In order to trigger the above subscription we need an alert. We create the alert as described in the tutorial. The alert checks for certain conditions. In our case it triggers if the temperature is below 32 degrees.
 
-![ThingWorx House Alert](file://thingworx-house-alert.png)
+![ThingWorx House Alert](thingworx-house-alert.png)
 
 4. Test It
 We can now simulate a low temperature without the need to have an actual sensor or to wait for freezing temperatures. You can just go the the properties of the MyHouse Thing and edit the temperature value. Set it to 20 degrees for example. This as a result triggers the alert and the corresponding subscription sends the alert notification to SIGNL4 so your team will receive it.
